@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Michelle Gumapac | Premium Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dcb6ac", // Rose Gold
+                        "primary-hover": "#cfa094", // Darker Rose Gold
+                        "background-light": "#fff9f5", // Soft Cream
+                        "background-dark": "#1c1b22", // Charcoal/Slate
+                        "surface-dark": "#2a2830", // Lighter Charcoal for cards
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1c1b22;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4a4555;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dcb6ac;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(220, 182, 172, 0.3);
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: linear-gradient(to bottom, #dcb6ac, rgba(220, 182, 172, 0.1));
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-body antialiased transition-colors duration-300 selection:bg-primary selection:text-background-dark">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5 bg-[#1c1b22]/80 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a class="flex items-center gap-2 group" href="#">
+                <div
+                    class="h-10 w-10 bg-gradient-to-br from-primary to-[#b88c81] rounded-full flex items-center justify-center text-background-dark font-display font-bold text-xl group-hover:scale-105 transition-transform shadow-lg">
+                    MG
+                </div>
+                <span
+                    class="font-display font-bold text-lg tracking-wide hidden sm:block group-hover:text-primary transition-colors">Michelle
+                    Gumapac</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                    href="#about">About</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                    href="#services">Services</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                    href="#experience">Experience</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                    href="#tools">Tools</a>
+                <a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
+                    href="#testimonials">Testimonials</a>
+            </div>
+            <a class="hidden md:flex bg-primary hover:bg-primary-hover text-background-dark font-bold text-sm px-6 py-2.5 rounded-full transition-all transform hover:-translate-y-0.5 shadow-[0_0_15px_rgba(220,182,172,0.2)] hover:shadow-[0_0_20px_rgba(220,182,172,0.4)]"
+                href="#contact">
+                Work With Me
+            </a>
+            <button class="md:hidden text-white p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+            <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-900/10 rounded-full blur-[100px]">
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col gap-8 text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit mx-auto lg:mx-0">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Available for New Projects
+                </div>
+                <h1 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-tight">
+                    Empowering Executives with <span class="text-primary italic">Refined</span> Support
+                </h1>
+                <p class="text-lg text-slate-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    I am <strong class="text-white">Michelle Gumapac</strong>, a professional General Virtual Assistant
+                    crafting seamless operational experiences for high-level entrepreneurs and executives.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a class="inline-flex items-center justify-center gap-2 bg-primary text-background-dark font-bold text-base px-8 py-4 rounded-full hover:bg-primary-hover transition-all transform hover:-translate-y-1 shadow-[0_4px_14px_0_rgba(220,182,172,0.39)]"
+                        href="#contact">
+                        <span>Work With Me</span>
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                    </a>
+                    <a class="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 backdrop-blur-sm text-white font-bold text-base px-8 py-4 rounded-full hover:bg-white/10 transition-all hover:border-primary/50"
+                        href="#services">
+                        <span>View Services</span>
+                        <span class="material-symbols-outlined text-xl">grid_view</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-6 justify-center lg:justify-start pt-4">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-2xl text-white">5+</span>
+                        <span class="text-sm text-slate-500">Years Exp.</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/10"></div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-2xl text-white">50+</span>
+                        <span class="text-sm text-slate-500">Clients Served</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/10"></div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-2xl text-white">100%</span>
+                        <span class="text-sm text-slate-500">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative hidden lg:block h-full min-h-[600px]">
+                <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-20">
+                </div>
+                <div class="w-full h-full rounded-tr-[5rem] rounded-bl-[5rem] rounded-tl-2xl rounded-br-2xl overflow-hidden relative shadow-2xl border border-white/10"
+                    data-alt="Elegant workspace setup with laptop, fresh flowers, and tea, representing a refined virtual assistant environment"
+                    style="background-image: url('images/hero_bg.jpg'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-[#2a2830]/30 mix-blend-overlay"></div>
+                </div>
+                <div
+                    class="absolute -bottom-6 -left-6 bg-[#2a2830] border border-white/10 p-6 rounded-2xl shadow-2xl z-30 max-w-xs glass animate-bounce duration-[3000ms]">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/20 p-3 rounded-full text-primary">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Top Rated Talent</h4>
+                            <p class="text-slate-400 text-sm mt-1">Consistently delivering excellence across all virtual
+                                assistant platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2 text-slate-500">
+            <span class="text-xs uppercase tracking-widest">Scroll</span>
+            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </div>
+    </header>
+    <section class="py-24 relative" id="about">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 relative order-2 lg:order-1">
+                    <div
+                        class="relative z-10 rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-2xl rounded-br-2xl overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
+                        <img alt="Portrait of Michelle Gumapac"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                            data-alt="Professional headshot of a smiling woman in business casual attire"
+                            src="images/michelle_portrait.png" />
+                    </div>
+                    <div
+                        class="absolute top-6 left-6 w-full h-full border-2 border-primary rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-2xl rounded-br-2xl -z-0 opacity-50">
+                    </div>
+                </div>
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <h2 class="font-display font-bold text-4xl text-white mb-6">About Me</h2>
+                    <h3 class="text-2xl text-primary font-medium mb-6 font-display italic">Efficiency, Grace, &amp;
+                        Proactive Management</h3>
+                    <div class="space-y-6 text-slate-300 font-light leading-relaxed text-lg">
+                        <p>
+                            In the dynamic landscape of modern business, peace of mind is invaluable. I provide that
+                            serenity by meticulously handling the intricate details that can often overwhelm a
+                            visionary's schedule.
+                        </p>
+                        <p>
+                            As a dedicated General Virtual Assistant, I partner with entrepreneurs and executives to
+                            harmonize workflows, curate complex calendars, and ensure that every interaction reflects
+                            your brand's excellence. My approach is holistic—blending administrative precision with
+                            intuitive support.
+                        </p>
+                        <p>
+                            With a background in executive administration and a suite of modern digital tools, I
+                            transform chaotic to-do lists into streamlined pathways for success.
+                        </p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-2 gap-6">
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">schedule</span>
+                            <div>
+                                <h4 class="text-white font-bold">Time Management</h4>
+                                <p class="text-slate-400 text-sm">Saving 15+ hrs/week</p>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <span class="material-symbols-outlined text-3xl text-primary">lock</span>
+                            <div>
+                                <h4 class="text-white font-bold">Data Security</h4>
+                                <p class="text-slate-400 text-sm">Confidential handling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-[#151419]" id="services">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-bold text-4xl text-white mb-4">Core Services</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Bespoke administrative solutions designed to elevate your
+                    business operations.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">mail</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Inbox Management</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Achieve Inbox Zero with elegance. I filter noise,
+                        organize folders, draft correspondence, and highlight priority communications requiring your
+                        personal touch.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">calendar_month</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Calendar Curation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Strategic scheduling that respects your rhythm. I
+                        handle appointments, buffer times, and time-zone coordination seamlessly.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Travel Logistics</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">End-to-end travel planning including flight
+                        bookings, boutique accommodation, itinerary creation, and expense tracking for stress-free
+                        trips.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">database</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Data &amp; CRM Care</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Meticulous data organization and CRM maintenance
+                        to ensure your client information is accurate, up-to-date, and actionable.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">description</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Document Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Creating, formatting, and refining professional
+                        documents, presentations, and spreadsheets tailored to your brand's aesthetic.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
+                        <span class="material-symbols-outlined text-3xl">support_agent</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Client Concierge</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Providing premium support to your clients via
+                        email or chat, ensuring their inquiries are resolved with empathy, warmth, and speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 relative overflow-hidden" id="experience">
+        <div
+            class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="font-display font-bold text-4xl text-white mb-10">Professional Journey</h2>
+                    <div class="relative timeline-line pl-8 md:pl-0">
+                        <div class="relative mb-12 md:w-1/2 md:ml-auto md:pl-10 pl-8 group">
+                            <div
+                                class="absolute top-0 left-[-9px] md:left-[-9px] w-[18px] h-[18px] rounded-full bg-background-dark border-4 border-primary z-10 group-hover:scale-125 transition-transform">
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors">
+                                <span class="text-primary text-sm font-bold tracking-wider uppercase mb-1 block">2021 -
+                                    Present</span>
+                                <h3 class="text-white font-bold text-xl font-display">Executive Virtual Assistant</h3>
+                                <p class="text-slate-400 text-sm mb-3">Global Tech Solutions Inc.</p>
+                                <ul class="list-disc list-inside text-slate-400 text-sm space-y-1">
+                                    <li>Managed calendars for 3 C-level executives.</li>
+                                    <li>Streamlined internal communication processes.</li>
+                                    <li>Coordinated international travel and logistics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="relative mb-12 md:w-1/2 md:mr-auto md:pr-10 md:text-right pl-8 md:pl-0 group">
+                            <div
+                                class="absolute top-0 left-[-9px] md:left-auto md:right-[-9px] w-[18px] h-[18px] rounded-full bg-background-dark border-4 border-primary z-10 group-hover:scale-125 transition-transform">
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors">
+                                <span class="text-primary text-sm font-bold tracking-wider uppercase mb-1 block">2019 -
+                                    2021</span>
+                                <h3 class="text-white font-bold text-xl font-display">Administrative Specialist</h3>
+                                <p class="text-slate-400 text-sm mb-3">Creative Agency Co.</p>
+                                <ul class="list-disc list-inside md:list-none text-slate-400 text-sm space-y-1">
+                                    <li>Oversaw client onboarding procedures.</li>
+                                    <li>Maintained CRM database accuracy (HubSpot).</li>
+                                    <li>Assisted in project management tasks.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="relative md:w-1/2 md:ml-auto md:pl-10 pl-8 group">
+                            <div
+                                class="absolute top-0 left-[-9px] md:left-[-9px] w-[18px] h-[18px] rounded-full bg-background-dark border-4 border-primary z-10 group-hover:scale-125 transition-transform">
+                            </div>
+                            <div
+                                class="bg-surface-dark border border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors">
+                                <span class="text-primary text-sm font-bold tracking-wider uppercase mb-1 block">2018 -
+                                    2019</span>
+                                <h3 class="text-white font-bold text-xl font-display">Customer Service Rep</h3>
+                                <p class="text-slate-400 text-sm mb-3">Prime Support Services</p>
+                                <ul class="list-disc list-inside text-slate-400 text-sm space-y-1">
+                                    <li>Top 5% performer in customer satisfaction.</li>
+                                    <li>Handled high-volume email and chat support.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:pl-8">
+                    <h2 class="font-display font-bold text-4xl text-white mb-10">Skills Proficiency</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-white font-medium">Communication (Written &amp; Verbal)</span>
+                                <span class="text-primary font-bold">98%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div
+                                    class="h-full bg-primary rounded-full w-[98%] shadow-[0_0_10px_rgba(220,182,172,0.5)]">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-white font-medium">Project Management</span>
+                                <span class="text-primary font-bold">90%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div
+                                    class="h-full bg-primary rounded-full w-[90%] shadow-[0_0_10px_rgba(220,182,172,0.5)]">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-white font-medium">Technical Proficiency</span>
+                                <span class="text-primary font-bold">95%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div
+                                    class="h-full bg-primary rounded-full w-[95%] shadow-[0_0_10px_rgba(220,182,172,0.5)]">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-white font-medium">Organization &amp; Planning</span>
+                                <span class="text-primary font-bold">99%</span>
+                            </div>
+                            <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                                <div
+                                    class="h-full bg-primary rounded-full w-[99%] shadow-[0_0_10px_rgba(220,182,172,0.5)]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h3 class="text-white font-bold text-lg mb-4">Soft Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm hover:border-primary/50 hover:text-primary transition-colors cursor-default">Proactive</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm hover:border-primary/50 hover:text-primary transition-colors cursor-default">Adaptable</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm hover:border-primary/50 hover:text-primary transition-colors cursor-default">Detail-Oriented</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm hover:border-primary/50 hover:text-primary transition-colors cursor-default">Resourceful</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm hover:border-primary/50 hover:text-primary transition-colors cursor-default">Reliable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-[#151419]" id="tools">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-bold text-4xl text-white mb-4">Tools &amp; Platforms</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Proficient in industry-standard software to keep your
+                    business running smoothly.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <img alt="Slack" class="w-10 h-10 grayscale group-hover:grayscale-0 transition-all"
+                        data-alt="Slack logo" src="images/slack.png" />
+                    <span class="text-slate-300 text-sm font-medium">Slack</span>
+                </div>
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <img alt="Google Workspace" class="w-10 h-10 grayscale group-hover:grayscale-0 transition-all"
+                        data-alt="Google Docs logo" src="images/workspace.png" />
+                    <span class="text-slate-300 text-sm font-medium">Workspace</span>
+                </div>
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <img alt="Trello" class="w-10 h-10 grayscale group-hover:grayscale-0 transition-all"
+                        data-alt="Trello logo" src="images/trello.png" />
+                    <span class="text-slate-300 text-sm font-medium">Trello</span>
+                </div>
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <img alt="Canva" class="w-10 h-10 grayscale group-hover:grayscale-0 transition-all"
+                        data-alt="Canva logo" src="images/canva.png" />
+                    <span class="text-slate-300 text-sm font-medium">Canva</span>
+                </div>
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <img alt="Salesforce"
+                        class="w-10 h-10 object-contain grayscale group-hover:grayscale-0 transition-all"
+                        data-alt="Salesforce logo" src="images/salesforce.png" />
+                    <span class="text-slate-300 text-sm font-medium">Salesforce</span>
+                </div>
+                <div
+                    class="glass p-6 rounded-2xl flex flex-col items-center gap-3 hover:bg-white/10 transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-blue-400 transition-colors">video_camera_front</span>
+                    <span class="text-slate-300 text-sm font-medium">Zoom</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 relative" id="testimonials">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-display font-bold text-4xl text-white mb-16 text-center">Client Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="bg-surface-dark border border-white/5 p-8 rounded-3xl relative hover:border-primary/30 transition-all group">
+                    <span
+                        class="material-symbols-outlined absolute top-6 right-6 text-6xl text-white/5 group-hover:text-primary/10 transition-colors">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-slate-700 overflow-hidden">
+                            <img alt="Client 1" class="w-full h-full object-cover"
+                                data-alt="Headshot of a smiling woman" src="images/testimonial1.jpg" />
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Sarah Jenkins</h4>
+                            <p class="text-primary text-xs font-medium uppercase tracking-wide">CEO, TechStart</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 italic leading-relaxed">"Michelle is an absolute lifesaver. Her attention
+                        to detail and ability to predict what I need before I even ask is unparalleled. She has given me
+                        back hours in my day."</p>
+                </div>
+                <div
+                    class="bg-surface-dark border border-white/5 p-8 rounded-3xl relative hover:border-primary/30 transition-all group">
+                    <span
+                        class="material-symbols-outlined absolute top-6 right-6 text-6xl text-white/5 group-hover:text-primary/10 transition-colors">format_quote</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-slate-700 overflow-hidden">
+                            <img alt="Client 2" class="w-full h-full object-cover"
+                                data-alt="Headshot of a man in a suit" src="images/testimonial2.jpg" />
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Michael Ross</h4>
+                            <p class="text-primary text-xs font-medium uppercase tracking-wide">Founder, Ross Creative
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 italic leading-relaxed">"Professional, discreet, and incredibly efficient.
+                        Hiring Michelle was the best investment I made for my business this year. Highly recommended."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-[#151419] relative overflow-hidden" id="contact">
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="glass p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="font-display font-bold text-4xl text-white mb-4">Let's Work Together</h2>
+                    <p class="text-slate-400">Ready to elevate your productivity? Send me a message and let's discuss
+                        how I can support your business.</p>
+                </div>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <input
+                                class="peer w-full bg-background-dark/50 border border-white/10 rounded-lg px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                id="name" placeholder="Name" type="text" />
+                            <label
+                                class="absolute left-4 top-2 text-xs text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-500 peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary"
+                                for="name">Your Name</label>
+                        </div>
+                        <div class="relative">
+                            <input
+                                class="peer w-full bg-background-dark/50 border border-white/10 rounded-lg px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                id="email" placeholder="Email" type="email" />
+                            <label
+                                class="absolute left-4 top-2 text-xs text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-500 peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary"
+                                for="email">Email Address</label>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <select
+                            class="peer w-full bg-background-dark/50 border border-white/10 rounded-lg px-4 pt-6 pb-2 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none"
+                            id="service">
+                            <option class="text-slate-500" disabled="" selected="" value="">Select a Service</option>
+                            <option class="text-black" value="general">General Assistance</option>
+                            <option class="text-black" value="email">Email Management</option>
+                            <option class="text-black" value="calendar">Calendar Management</option>
+                            <option class="text-black" value="other">Other</option>
+                        </select>
+                        <label class="absolute left-4 top-2 text-xs text-slate-400" for="service">Interested
+                            Service</label>
+                        <span
+                            class="material-symbols-outlined absolute right-4 top-4 text-slate-500 pointer-events-none">expand_more</span>
+                    </div>
+                    <div class="relative">
+                        <textarea
+                            class="peer w-full bg-background-dark/50 border border-white/10 rounded-lg px-4 pt-6 pb-2 text-white placeholder-transparent focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                            id="message" placeholder="Message" rows="4"></textarea>
+                        <label
+                            class="absolute left-4 top-2 text-xs text-slate-400 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-500 peer-focus:top-2 peer-focus:text-xs peer-focus:text-primary"
+                            for="message">Your Message</label>
+                    </div>
+                    <button
+                        class="w-full bg-primary text-background-dark font-bold text-lg py-4 rounded-full hover:bg-primary-hover transition-all shadow-[0_4px_14px_0_rgba(220,182,172,0.39)] hover:translate-y-[-2px]"
+                        type="button">
+                        Send Message
+                    </button>
+                </form>
+                <div class="mt-10 pt-6 border-t border-white/10 flex justify-center gap-8">
+
+                    <a class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+                        href="mailto:michellebalolot1212@gmail.com">
+                        <span class="material-symbols-outlined text-xl">mail</span>
+                        <span class="font-medium">Email Me directly</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-8 bg-background-dark border-t border-white/5 text-center">
+        <p class="text-slate-500 text-sm">© 2026 Michelle Gumapac. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
